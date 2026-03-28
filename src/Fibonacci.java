@@ -1,8 +1,25 @@
+ import java.util.*;
 public class Fibonacci {
-    
-        // TODO: Read N
-        // TODO: Handle base cases (N=1 -> 0, N=2 -> 1)
-        // TODO: Calculate the Nth number for N > 2
-        // TODO: Print the result
-    
+
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+if(n==1){
+System.out.print(0);
+return;
 }
+if(n==2){
+System.out.print(1);
+return;
+}
+int a=0,b=1,c=0;
+for(int i=3;i<=n;i++){
+c=a+b;
+a=b;
+b=c;
+}
+System.out.print(c);
+}
+}
+    
+
